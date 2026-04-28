@@ -1,10 +1,10 @@
-package dev.rafsk.PatientRegistration;
+package dev.rafsk.HospitalCRUD;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class PatientRegistrationApplicationTests {
+class HospitalCRUDApplicationTests {
 
 	@Test
 	void contextLoads() {
