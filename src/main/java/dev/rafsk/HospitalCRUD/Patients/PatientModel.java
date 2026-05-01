@@ -17,9 +17,17 @@ public class PatientModel {
      @Id
      @GeneratedValue(strategy = GenerationType.IDENTITY)
      private Long id;
+
      private String name;
+
+     @Column(unique = true)
      private String email;
+
      private int age;
+
+     @Column(unique = true)
+     private int nationalId;
+
      private List<ExamsModel> exams;
 
 
