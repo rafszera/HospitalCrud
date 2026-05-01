@@ -1,4 +1,4 @@
-package dev.rafsk.HospitalCRUD;
+package dev.rafsk.HospitalCRUD.Patients;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;

@@ -1,9 +1,12 @@
-package dev.rafsk.HospitalCRUD;
+package dev.rafsk.HospitalCRUD.Patients;
 
+import dev.rafsk.HospitalCRUD.Exams.ExamsModel;
 import jakarta.persistence.*;
+import java.util.List;
 
 @Entity
 @Table(name = "tb_patient_registration")
+
 public class PatientModel {
 
      @Id
@@ -12,6 +15,8 @@ public class PatientModel {
      private String name;
      private String email;
      private int age;
+     private List<ExamsModel> exams;
+
 
 
 
