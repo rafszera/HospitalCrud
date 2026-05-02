@@ -7,7 +7,7 @@ import lombok.NoArgsConstructor;
 import java.util.List;
 
 @Entity
-@Table(name = "tb_patient_registration")
+@Table(name = "tb_patients_R")
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
@@ -16,19 +16,27 @@ public class PatientModel {
 
      @Id
      @GeneratedValue(strategy = GenerationType.IDENTITY)
+     @Column(name = "id")
      private Long id;
 
+     @Column(name = "name")
      private String name;
 
-     @Column(unique = true)
+     @Column(unique = true, name = "email")
      private String email;
 
+     @Column(name = "img_url")
+     private String imgUrl;
+
+     @Column(name = "age")
      private int age;
 
-     @Column(unique = true)
+     @Column(unique = true, name = "national_ir")
      private int nationalId;
 
-     private List<ExamsModel> exams;
 
+     @ManyToOne
+     @JoinColumn(name = "exam_id")
+     private ExamsModel exam;
 
 }

@@ -1,8 +1,11 @@
 package dev.rafsk.HospitalCRUD.Exams;
+import dev.rafsk.HospitalCRUD.Patients.PatientModel;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+
+import java.util.List;
 
 @Entity
 @Table(name = "tb_exams")
@@ -18,4 +21,7 @@ public class ExamsModel {
     private ExamType type;
 
 
+
+    @OneToMany(mappedBy = "exam")
+    private List<PatientModel> patient;
 }
