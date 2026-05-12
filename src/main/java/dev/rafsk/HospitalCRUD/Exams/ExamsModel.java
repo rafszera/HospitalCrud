@@ -18,7 +18,10 @@ public class ExamsModel {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String nameExam;
-    private ExamType type;
+
+
+
+
 
 
 
